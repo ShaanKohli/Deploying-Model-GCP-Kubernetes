@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Predict Hypertension Class</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='./style.css') }}">
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Predict Hypertension Class</h1>
+
+     <!-- Form to enter new data for predictions  -->
+    <form action="{{ url_for('predict')}}"method="POST">
+      <input type="text" name="Gender" placeholder="Gender" required="required" /><br>
+    	<input type="text" name="Occupation" placeholder="Occupation" required="required" /><br>
+      <input type="text" name="History_Hypertension" placeholder="History_Hypertension" required="required" /><br>
+      <input type="text" name="Med_BP" placeholder="Med_BP" required="required" /><br>
+      <input type="text" name="Is_Consult" placeholder="Is_Consult" required="required" /><br>
+      <input type="text" name="Is_Treatment" placeholder="Is_Treatment" required="required" /><br>
+      <input type="text" name="Year_Treatment" placeholder="Year_Treatment" required="required" /><br>
+    	<input type="text" name="Is_HealthyDiet" placeholder="Is_HealthyDiet" required="required" /><br>
+      <input type="text" name="Is_FastFood" placeholder="Is_FastFood" required="required" /><br>
+      <input type="text" name="Is_Salt" placeholder="Is_Salt" required="required" /><br>
+      <input type="text" name="Num_Salt" placeholder="Num_Salt" required="required" /><br>
+      <input type="text" name="Is_Smoke" placeholder="Is_Smoke" required="required" /><br>
+      <input type="text" name="Is_Caffeine" placeholder="Is_Caffeine" required="required" /><br>
+      <input type="text" name="Is_Alcohol" placeholder="Is_Alcohol" required="required" /><br>
+      <input type="text" name="Is_Hospital" placeholder="Is_Hospital" required="required" /><br>
+      <input type="text" name="Physical_Activity" placeholder="Physical_Activity" required="required" /><br>
+      <input type="text" name="Sex" placeholder="Sex" required="required" /><br>
+      <input type="text" name="Age_y" placeholder="Age_y" required="required" /><br>
+      <input type="text" name="DIAGNOSIS" placeholder="DIAGNOSIS" required="required" /><br>
+      <input type="text" name="HEIGHT" placeholder="HEIGHT" required="required" /><br>
+      <input type="text" name="WEIGHT" placeholder="WEIGHT" required="required" /><br>
+      <input type="text" name="BMI" placeholder="BMI" required="required" /><br>
+      <input type="text" name="BMI_VALUE" placeholder="HEIGHT" required="required" /><br>
+      <input type="text" name="PULSE" placeholder="PULSE" required="required" /><br>
+      <input type="text" name="MEDICINE1" placeholder="MEDICINE1" required="required" /><br>
+      <input type="text" name="MEDICINE2" placeholder="MEDICINE2" required="required" /><br>
+
+      
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+  
+   
+   
+ </div>
+ {{pred}}
+
+</body>
+</html>
